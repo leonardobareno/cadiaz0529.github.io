@@ -6,13 +6,34 @@
   display: none;
 }
 
+h1 {
+	text-align: center;
+}
+
+svg {
+	text-align: center;
+}
+
+#stacked1, #stacked2 {
+	margin: auto;
+	text-align: center;
+	width: 70%;
+}
+
 </style>
 <body>
-  <h1>Tipos de obras más publicadas por continente</h1>
-  <svg id="chart1" width="640" height="640" style="border: 1px solid black"></svg>
+  <h1>Colombianos, en "plan Gabo" en el exterior</h1>
+  <div id="stacked1">
+  	En el primer semestre del año en curso se registraron más de 600 obras de arte de varios tipos: literarias, musicales, audiovisuales, entre otras. Inmediatamente surge la curiosidad: ¿de qué tipo se publicaron más?¿en cuáles continentes publicamos más y cuáles menos? Fue así como surgió esta primera gráfica, en la que se muestra el número de obras publicadas de cada tipo por continente. La sorpresa, bueno, salta a la vista:
+  	<h3>Tipos de obras más publicadas por continente</h1>
+  	<svg id="chart1" width="640" height="640"></svg>
+  </div>
 
-  <h1>Número de autores distintos por continente</h1>
-  <svg id="chart2" width="640" height="640" style="border: 1px solid black"></svg>
+  <div id="stacked2">
+  	La reacción natural ante el gráfico anterior sería: algo está mal con los datos. La realidad es que no. Otro análisis que se puede hacer es el de cuántos autores distintos publican por tipo de obra y por continente. Al ver el gráfico nos damos cuenta que hay un autor que registró <strong>¡434 obras literarias!</strong> en Oceanía (en Australia de hecho). El gráfico siguiente nos da una mejor idea de qué tipo de obras y en qué continentes se publica más:
+  	<h3>Número de autores distintos por continente</h1>
+  	<svg id="chart2" width="640" height="640"></svg>
+  </div>
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script>
