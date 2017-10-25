@@ -221,3 +221,28 @@ d3.json("insta_basket.json", function(miserables) {
     <p><strong>Insight:</strong> Los productos congelados y refrigerados (frutas y verduras congeladas, y refrigerados como jugos y otras bebdas) también están presentes en varios de los clusters que se presentan (incluso hacen parte de un gran <i>clique</i>).</p>
   </div>
 </div>
+  
+<!--
+Code Review
+
+Por aparte transformé un poco el json, coloqué cada nodo y link en una sola línea para poder buscar mejor:
+
+(...)
+        {"group":1,"name":"buns rolls"},
+        {"group":1,"name":"butter"},
+        {"group":1,"name":"bacon sausage"}
+    ],
+    "links": [
+        {"source":37,"target":30,"value":3},
+        {"source":1,"target":20,"value":3},
+(...)
+
+En esta tarea, el autor resolvió el problema de la asimetría (representar enlaces bidireccionales o unidireccionales) a 
+través de la intensidad de color. El valor Alpha es más alto en, p ej:
+
+{"source":55,"target":58,"value":3},
+{"source":58,"target":55,"value":3},
+
+el cual hace que los 2 pares de celdas "AB" y "BA" queden con un Alpha de 0.6; y si solo hay 1 link el Alpha va a quedar en 0.3
+-->
+  
